@@ -1,0 +1,427 @@
+:root {
+  --primary: #5B4B8A;
+  --secondary: #FFD54F;
+  --dark: #1E1E1E;
+  --light: #F5F5F5;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--primary);
+  color: white;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero img {
+  width: 300px;
+}
+
+.hero h1 {
+  font-size: 56px;
+}
+
+.hero p {
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+/* SEÇÕES PADRÃO */
+.section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 100px 20px;
+}
+
+.section h2 {
+  color: var(--secondary);
+  margin-bottom: 20px;
+}
+
+/* IMAGENS TOPO */
+.imagens-topo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.imagens-topo img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/* DUAS IMAGENS */
+.duas-imagens {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.duas-imagens img {
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+/* PROBLEMA + OBJETIVO */
+.info-dupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.bloco {
+  background: white;
+  color: black;
+  padding: 40px;
+  border-radius: 24px;
+}
+
+.bloco h2 {
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+/* PERSONA */
+.persona {
+  background: white;
+  color: black;
+  padding: 40px;
+  border-radius: 24px;
+}
+
+.persona ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+/* JOURNEY */
+.journey {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.step {
+  background: var(--light);
+  color: black;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+/* DESIGN SYSTEM */
+.colors {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.color {
+  padding: 20px 30px;
+  border-radius: 16px;
+  font-weight: bold;
+}
+
+.primary { background: #5B4B8A; }
+.secondary { background: #FFD54F; color: black; }
+.dark { background: #1E1E1E; }
+.light { background: #F5F5F5; color: black; }
+
+/* TELAS */
+.screens {
+  width: 100%;
+  border-radius: 24px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+footer a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .hero img {
+    margin-top: 40px;
+    width: 250px;
+  }
+
+  .imagens-topo,
+  .duas-imagens,
+  .info-dupla {
+    grid-template-columns: 1fr;
+  }
+
+  .imagens-topo img {
+    height: auto;
+  }
+
+}
+/* ============================= */
+/* FLUXO APP */
+/* ============================= */
+
+.fluxo-app {
+  margin-top: 80px;
+}
+
+.fluxo-app h2 {
+  margin-bottom: 40px;
+}
+
+.fluxo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.tela {
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.tela img {
+  width: 200px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+}
+
+.tela:hover img {
+  transform: scale(1.05);
+}
+
+.seta {
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 0.6;
+}
+.fluxo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.fluxo-linha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.seta {
+  font-size: 40px;
+  opacity: 0.6;
+}
+
+.seta-vertical {
+  font-size: 40px;
+  opacity: 0.6;
+}
+/* ============================= */
+/* DESIGN SYSTEM PREMIUM */
+ /* ============================= */
+
+.design-system {
+  padding: 140px 0;
+}
+
+.design-system h2 {
+  font-size: 44px;
+  margin-bottom: 80px;
+}
+
+/* GRID LADO A LADO */
+.design-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 120px;
+  align-items: start;
+}
+
+/* ============================= */
+/* TIPOGRAFIA */
+ /* ============================= */
+
+.tipografia h3,
+.cores h3 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.font-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.font-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.08);
+}
+
+.font-name {
+  display: block;
+  font-size: 12px;
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+
+.font-card p {
+  font-size: 20px;   /* menor */
+  margin: 0;
+}
+
+.font-regular { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-bold { font-weight: 700; }
+
+.font-alt { font-family: serif; }
+.font-alt2 { font-family: serif; }
+
+/* ============================= */
+/* CORES */
+ /* ============================= */
+
+.cores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.color-card {
+  cursor: pointer;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.color-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.cor {
+  width: 100%;
+  height: 90px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.color-card span {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+/* Feedback Copiado */
+.copiado {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #00ff88;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .design-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .cores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ============================= */
+/* WIREFRAMES */
+/* ============================= */
+
+.wireframes {
+  margin-top: 120px;
+}
+
+.wireframes h2 {
+  margin-bottom: 40px;
+}
+
+.wireframe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.wireframe-linha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.wireframe {
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.wireframe img {
+  width: 220px;
+  border-radius: 16px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+}
+
+.wireframe:hover img {
+  transform: scale(1.05);
+}
+
+.wireframe p {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}

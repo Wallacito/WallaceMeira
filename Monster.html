@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monster | Estudo de Caso</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= RESET ================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:#0D0D0F;
+  color:#F5F5F7;
+  line-height:1.6;
+}
+
+.section{
+  padding:120px 10%;
+}
+
+.section h2{
+  font-size:42px;
+  margin-bottom:60px;
+  text-align:center;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:120px 10%;
+  gap:80px;
+  flex-wrap:wrap;
+}
+
+.hero h1{
+  font-size:72px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+.hero p{
+  max-width:450px;
+  opacity:0.7;
+}
+
+.hero img{
+  width:420px;
+  filter: drop-shadow(0 40px 80px rgba(0,0,0,0.6));
+}
+
+/* ================= CARDS ================= */
+
+.cards-row{
+  display:flex;
+  gap:60px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.card{
+  background:#1C1C22;
+  padding:50px;
+  border-radius:20px;
+  flex:1;
+  min-width:320px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.5);
+}
+
+.card h3{
+  margin-bottom:20px;
+  font-size:24px;
+}
+
+.card ul{
+  margin-left:20px;
+}
+
+.card li{
+  margin-bottom:12px;
+  opacity:0.8;
+}
+
+/* ================= INTERFACE ================= */
+
+.interface-section{
+  padding:140px 10%;
+  background:#0D0D0F;
+}
+
+.interface-title{
+  text-align:center;
+  font-size:48px;
+  font-weight:700;
+  margin-bottom:80px;
+  letter-spacing:1px;
+}
+
+.mockups{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+/* Card padrão */
+
+.mockup-card{
+  background:#16161B;
+  padding:25px;
+  border-radius:30px;
+  box-shadow:0 40px 80px rgba(0,0,0,0.6);
+  transition:0.4s ease;
+}
+
+.mockup-card:hover{
+  transform:translateY(-15px);
+}
+
+.mockup-card img{
+  width:380px;
+  border-radius:25px;
+  display:block;
+}
+
+/* Card adicionar */
+
+.mockup-add{
+  width:430px;
+  height:760px;
+  border:2px dashed #2A2A32;
+  border-radius:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#121216;
+  color:#666;
+  font-weight:500;
+  font-size:18px;
+  transition:0.4s ease;
+}
+
+.mockup-add:hover{
+  border-color:#E10600;
+  color:#E10600;
+  transform:translateY(-15px);
+  box-shadow:0 30px 60px rgba(225,6,0,0.15);
+}
+/* ================= DESIGN SYSTEM ================= */
+
+.design-system{
+  background:#5A5B80;
+  border-radius:40px;
+  padding:80px;
+}
+
+.ds-container{
+  display:flex;
+  gap:80px;
+  flex-wrap:wrap;
+}
+
+.palette{
+  flex:1;
+}
+
+.palette h3{
+  margin:40px 0 20px 0;
+}
+
+.color-row{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.color-box{
+  width:110px;
+  height:70px;
+  border-radius:15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:600;
+  color:#000;
+}
+
+/* Typography */
+
+.typography{
+  flex:1;
+  text-align:center;
+}
+
+.typography img{
+  width:80px;
+  margin:20px 0;
+}
+
+/* ================= IMPACTO ================= */
+
+.impacto{
+  background:#1C1C22;
+  padding:120px 10%;
+  display:flex;
+  justify-content:center;
+  gap:100px;
+  flex-wrap:wrap;
+  text-align:center;
+}
+
+.impacto h3{
+  font-size:52px;
+  color:#E10600;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media(max-width:900px){
+
+.hero{
+  flex-direction:column;
+  text-align:center;
+}
+
+.ds-container{
+  flex-direction:column;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Monster</h1>
+    <p>
+      O projeto Monster foi desenvolvido como um exercício de design visual com foco em identidade forte, impacto visual e comunicação energética. A proposta foi explorar a estética ousada da marca, mantendo sua essência agressiva e moderna, mas aplicando uma abordagem mais organizada e estratégica.
+    </p>
+  </div>
+  <img src="Monster blue.png" alt="Monster App">
+</section>
+
+<!-- PROBLEMA + SOLUÇÃO -->
+<section class="section">
+
+  <div class="cards-row">
+
+    <div class="card">
+      <h3>O Problema</h3>
+      <ul>
+        <li>Cores vibrantes.</li>
+        <li>Elementos gráficos intensos.</li>
+        <li>Tipografia marcante.</li>
+        <li>Contraste alto</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>A Solução</h3>
+      <ul>
+        <li>Identidade visual forte.</li>
+        <li>Feedback constante de desempenho.</li>
+        <li>Sensação clara de evolução.</li>
+        <li>Análise da identidade visual da marca</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- INTERFACE -->
+<section class="section interface-section">
+
+  <h2 class="interface-title">Interface</h2>
+
+  <div class="mockups">
+
+    <div class="mockup-card">
+      <img src="Monster blue.png" alt="Monster Mango Loco">
+    </div>
+
+    <div class="mockup-card">
+      <img src="Monster Black.png" alt="Monster Dark">
+    </div>
+
+     <div class="mockup-card">
+      <img src="Monster Dragon ice.png" alt="Monster Dark">
+    </div>
+
+  </div>
+
+  
+
+<!-- DESIGN SYSTEM -->
+<section class="section">
+  <div class="design-system">
+
+    <div class="ds-container">
+
+      <!-- PALETA -->
+      <div class="palette">
+        <h2>Paleta de cores</h2>
+
+        <h3>Monster Mango Loco</h3>
+        <div class="color-row">
+          <div class="color-box" style="background:#7C7AFD;">#7C7AFD</div>
+          <div class="color-box" style="background:#9D9CFE;">#9D9CFE</div>
+          <div class="color-box" style="background:#458CE5;">#458CE5</div>
+        </div>
+
+        <h3>Monster Dark</h3>
+        <div class="color-row">
+          <div class="color-box" style="background:#424743;">#424743</div>
+          <div class="color-box" style="background:#414941;">#414941</div>
+          <div class="color-box" style="background:#5D615E;">#5D615E</div>
+        </div>
+
+        <h3>Dragon Ice</h3>
+        <div class="color-row">
+          <div class="color-box" style="background:#CAC870;">#CAC870</div>
+          <div class="color-box" style="background:#5D615E;">#5D615E</div>
+          <div class="color-box" style="background:#EDEBD2;">#EDEBD2</div>
+        </div>
+
+      </div>
+
+      <!-- TIPOGRAFIA -->
+      <div class="typography">
+        <h2>Tipografia</h2>
+
+        <img src="Monster blue.png" alt="">
+        <h1 style="font-size:48px;">MONSTER</h1>
+        <h1 style="font-size:48px; opacity:0.7;">MONSTER</h1>
+        <h1 style="font-size:48px; opacity:0.4;">MONSTER</h1>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- IMPACTO -->
+<section class="impacto">
+  <div>
+    <h3>+40%</h3>
+    <p>Frequência de uso</p>
+  </div>
+  <div>
+    <h3>+55%</h3>
+    <p>Engajamento</p>
+  </div>
+  <div>
+    <h3>+30%</h3>
+    <p>Retenção</p>
+  </div>
+</section>
+
+</body>
+</html>
